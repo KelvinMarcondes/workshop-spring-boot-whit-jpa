@@ -10,15 +10,15 @@ import com.curso.workshopSpringBoot3jpa.entities.User;
 import com.curso.workshopSpringBoot3jpa.repositories.UserRepository;
 
 @Service
-public class UserService {
-
+public class OderItemService {
+	
 	@Autowired
 	private UserRepository repository;
-
-	public List<User> findAll() {
+	
+	public List<User> findAll(){
 		return repository.findAll();
 	}
-
+	
 	public User findById(Long id) {
 		Optional<User> obj = repository.findById(id);
 		return obj.get();
